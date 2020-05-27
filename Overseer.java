@@ -1,5 +1,8 @@
 package game;
 
+	/*
+	 *  This class is to keep contron of all the things happening in the program
+	 */
 public class Overseer {
 	
 	String numQues = "";
@@ -11,8 +14,11 @@ public class Overseer {
 	int nCorrect = 0;
 	Window w = new Window();
 	
+	/*
+	 *  Constuctor for the class that is the start of the game
+	 */
 	public Overseer()
-    {
+    	{
         w.msg("Hello welcome to your quick maths game!");
         
         do 
@@ -85,7 +91,9 @@ public class Overseer {
         		+ "%");
         
     }
-	
+	/*
+	 * Method to check if the answer was correct or not. It also adds to the number wrong and right
+	 */
 	private void Result(boolean bcorrect, int answer)
 	{
 		if ( bcorrect )
@@ -101,6 +109,10 @@ public class Overseer {
 		}
 	}
 	
+	/*
+	 * This metod is to Swap the nain value with the max value
+	 */
+	
 	private void swap()
 	{
 		int temp = maxv;
@@ -108,6 +120,10 @@ public class Overseer {
 		minv = temp;
 		
 	}
+	
+	/*
+	 * This method is to get the users input which is the number they put in
+	 */
 	
 	public int getUserInput () {
 		if(numQues.equals("exit")) {
